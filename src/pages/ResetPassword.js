@@ -7,6 +7,7 @@ import{FaRegEye, FaRegEyeSlash} from "react-icons/fa"
 import { useAuth } from '../context/auth';
 import * as Yup from 'yup';
 import {useFormik} from 'formik'
+import { base_url } from '../utils/base_url';
 
 const ResetPassword = () => {
     const [show,setShow]=useState(false);
@@ -42,7 +43,7 @@ const ResetPassword = () => {
         else{
         
         try{
-            const res= await axios.put(`/api/user/reset-Password/${token}`,{password:values.password});
+            const res= await axios.put(`${base_url}/user/reset-Password/${token}`,{password:values.password});
           if(res.data){
             toast.success("ResetPassword succesful");
             setTimeout(()=>{navigate("/login")},3000)

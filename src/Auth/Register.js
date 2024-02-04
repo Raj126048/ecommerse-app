@@ -4,6 +4,7 @@ import axios from 'axios'
 import {  toast } from 'react-toastify';
 import { useNavigate} from 'react-router-dom';
 import{FaRegEye,FaEyeSlash} from "react-icons/fa"
+import { base_url } from '../utils/base_url';
 
 
 
@@ -26,7 +27,7 @@ const Register = () => {
           const firstname=name;
           const lastname=address;
           const mobile =phone;
-            const res= await axios.post('/api/user/register',{firstname,lastname,email,password,mobile});
+            const res= await axios.post(`${base_url}/user/register`,{firstname,lastname,email,password,mobile});
           if(res.data.success){
             toast.success("register succesful");
             setTimeout(()=>{navigate("/login")},3000)

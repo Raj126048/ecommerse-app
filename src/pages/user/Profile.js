@@ -12,6 +12,7 @@ import { config } from '../../utils/axiosconfig'
 import BreadCrumb from '../../components/BreadCrumb'
 import {FiEdit} from "react-icons/fi"
 import { useNavigate } from 'react-router-dom'
+import { base_url } from '../../utils/base_url'
 const Profile = () => {
   const navigate=useNavigate()
   let schema=Yup.object().shape({
@@ -41,7 +42,7 @@ const Profile = () => {
         const mobile=values.mobile
        
     
-          const res= await axios.put('/api/user/edit-user',{firstname:firstname,lastname:lastname,email:email,mobile:mobile},config);
+          const res= await axios.put(`${base_url}/user/edit-user`,{firstname:firstname,lastname:lastname,email:email,mobile:mobile},config);
    
           if(res.data){
             toast.success("profile update succesful");

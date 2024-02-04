@@ -7,6 +7,7 @@ import{FaRegEye,FaEyeSlash} from "react-icons/fa"
 import { useAuth } from '../context/auth';
 import * as Yup from 'yup';
 import {useFormik} from 'formik'
+import { base_url } from '../utils/base_url';
 
 const Login = () => {
   let schema=Yup.object().shape({
@@ -35,7 +36,7 @@ const location=useLocation();
     const handleSubmit=async (e)=>{
         e.preventDefault()
         try{
-            const res= await axios.post('/api/user/login',{email,password});
+            const res= await axios.post(`${base_url}/user/login`,{email,password});
           if(res&&res.data.success){
             toast.success("login succesful");
             setAuth({

@@ -7,6 +7,7 @@ import{FaRegEye,FaEyeSlash} from "react-icons/fa"
 import { useFormik } from 'formik';
 import { useAuth } from '../context/auth';
 import * as Yup from 'yup';
+import { base_url } from '../utils/base_url';
 
 
 const ForgotPassword = () => {
@@ -25,7 +26,7 @@ const ForgotPassword = () => {
     validationSchema:schema,
     onSubmit:async(values)=>{
       try{
-        const res= await axios.post('/api/user/forgot-password-token',{email:values.email});
+        const res= await axios.post(`${base_url}/user/forgot-password-token`,{email:values.email});
       if(res.data){
         toast.success("Forget password mail sent successfully ");
   
