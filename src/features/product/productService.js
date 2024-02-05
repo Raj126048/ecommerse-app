@@ -1,7 +1,7 @@
 import axios from "axios"
 
 import { base_url } from "../../utils/base_url"
-import { config } from "dotenv";
+import { config } from "../../utils/axiosconfig";
 
 const AddToWishList=async(prodId)=>{
     const ihd=(prodId.id);
