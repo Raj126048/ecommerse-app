@@ -15,7 +15,9 @@
     "axios": "^1.6.3",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
+    "dotenv-webpack": "^8.0.1",
     "formik": "^2.4.5",
+    "fs": "^0.0.1-security",
     "http-proxy-middleware": "^2.0.6",
     "os": "^0.1.2",
     "path": "^0.12.7",
@@ -64,7 +66,6 @@
     ]
   },
   "devDependencies": {
-    "dotenv-webpack": "^8.0.1",
-    "fs": "^0.0.1-security"
+    "dotenv-webpack": "^8.0.1"
   }
 }
