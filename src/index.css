@@ -1432,6 +1432,9 @@ height: 35px;
       line-height: 10px;
       
         }
+        .cart-col-4{
+          width: 32% !important;
+        }
 }
 @media(max-width:420px){
   .wishlist-wrapper .col-3{
@@ -1485,4 +1488,72 @@ height: 35px;
       line-height: 10px;
       
         }
+        .cart-col-4{
+          width: 32% !important;
+        }
+}
+@media(max-width:390px){
+  .cart-col-4{
+    width: 28% !important;
+  }
+  .clasic button{
+    
+    margin-left: 10px;
+   }
+   
+   .input-group input{
+     width: 80%;
+   }
+   .input-group span {
+    width: 45px;
+    margin-left: -46px !important;
+   }
+   .input-group{
+    width: 100% !important;
+   }
+   .clasic{
+     width: 100%;
+   
+     display: flex !important;
+     justify-content: space-between !important;
+    
+   }
+   .famous-wrapper .col-3{
+    width: 48% !important;
+   }
+   .famous-card{
+    margin-bottom: 7px;
+   }
+   .famous-card img{
+    margin-top: 70% !important;
+    height: 90px;
+   
+  }
+
+}
+@media(max-width:333px){
+  .clasic button{
+    
+    margin-left: 5px;
+    width: 40px;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+   }
+   .input-group{
+    width: 100% !important;
+   }
+   .input-group span {
+    width: 40px;
+    margin-left: -68px !important;
+   }
+   .input-group input{
+    width: 70%;
+  }
+  .famous-card img{
+    margin-top: 70% !important;
+    height: 90px;
+   
+  }
+
 }

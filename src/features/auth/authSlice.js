@@ -1,4 +1,4 @@
-import { CreateSlice,createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { CreateSlice,createAction,createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import authService from "./authService";
 import { toast } from "react-toastify";
 
@@ -147,6 +147,9 @@ export const updateOrders=createAsyncThunk("user/order/update",async(data,thunkA
 return thunkAPI.rejectWithValue(error)
     }
 })
+export const resetState=createAction("Reset_all")
+
+
 export const authSlice=createSlice({
     name:"auth",
     initialState,
@@ -410,6 +413,7 @@ export const authSlice=createSlice({
        
            
         })
+        .addCase(resetState,()=>initialState)
     },
 })
 

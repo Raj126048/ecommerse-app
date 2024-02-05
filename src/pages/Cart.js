@@ -6,7 +6,7 @@ import { AiFillDelete } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import Container from '../components/Container'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteCartProduct, getUserCart, updateCartProduct } from '../features/auth/authSlice'
+import { deleteCartProduct, getUserCart, resetState, updateCartProduct } from '../features/auth/authSlice'
 
 const Cart = () => {
     const dispatch=useDispatch();
@@ -33,6 +33,7 @@ const Cart = () => {
         setTimeout(()=>{dispatch(getUserCart())},200)
     }
     useEffect(()=>{
+        dispatch(resetState())
         dispatch(getUserCart())
         
     },[])
@@ -85,7 +86,7 @@ const Cart = () => {
                                     </div>
                                 </div>
                                 <div className='cart-col-4 c-c-4 d-flex align-items-center justify-content-end'>
-                                    <h5 className='hid-total'>Price:</h5>
+                                    <h5 className='hid-total'>Total:</h5>
                                 <h5 className='price'>$ {item?.price*item?.quantity}</h5>
                                 </div>
                                 </div>

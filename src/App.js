@@ -3,7 +3,7 @@ import { HomePage } from "./pages/HomePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Policy from "./pages/Policy";
-import PageNotFound from "./pages/PageNotFound";
+
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
 import Dashboard from "./pages/user/Dashboard";
@@ -38,6 +38,7 @@ import AddCoupon from "./pages/AddCoupon.js";
 import ViewOrder from "./pages/ViewOrder.js";
 import ResetPassword from "./pages/ResetPassword.js";
 import MyOrders from "./pages/MyOrders.js";
+import PageNotFound from "./pages/PageNotFound.js";
 
 
 
