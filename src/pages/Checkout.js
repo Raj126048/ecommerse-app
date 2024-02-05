@@ -12,6 +12,7 @@ import axios from 'axios'
 import { config } from '../utils/axiosconfig'
 import { CreateOrder } from '../features/auth/authSlice'
 import { toast } from 'react-toastify'
+import { base_url } from '../utils/base_url'
 
 
 const Checkout = () => {
@@ -57,7 +58,7 @@ let shippingSchema=Yup.object({
     },
     validationSchema:shippingSchema,
     onSubmit:(values)=>{
-        alert(JSON.stringify(values))
+        
         setShippingInfo(values)
         setTimeout(()=>{  checkoutHandler()},300)
       
@@ -106,7 +107,7 @@ setCartProduct(items)
             alert("Razorpay failed to load");
             return
         }
-        const result=await axios.post("http://localhost:5000/api/user/order/checkout",{amount:total},config)
+        const result=await axios.post(`${base_url}/user/order/checkout`,{amount:total},config)
         if(!result){
             alert("Something went wrong")
             return
@@ -128,7 +129,7 @@ setCartProduct(items)
                  
                 };
 
-                const result = await axios.post("http://localhost:5000/api/user/order/paymentVerification",data);
+                const result = await axios.post(`${base_url}/user/order/paymentVerification`,data);
                   setPaymentInfo({
                     razorpayPaymentId: response.razorpay_payment_id,
                     razorpayOrderId: response.razorpay_order_id,
