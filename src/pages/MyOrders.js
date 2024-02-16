@@ -61,7 +61,7 @@ for (let i = 0; i < orderState?.length; i++) {
   for (let index = 0; index < orderState[i]?.orderItems?.length; index++) {
   
     
-console.log( orderState[i].orderItems[index]?.product.?title );
+console.log( orderState[i].orderItems[index]?.product?.title );
   data1.push({
     key: k,
     name: orderState[i].orderItems[index]?.product?.title ,
