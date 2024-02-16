@@ -12,12 +12,12 @@ const Cart = () => {
     const dispatch=useDispatch();
     const [update,setUpdate]=useState(null)
     const [total,setTotal]=useState(null)
-    const userCartState=useSelector((state)=>state.auth.getcartProduct)
+    const userCartState=useSelector((state)=>state.auth?.getcartProduct)
     console.log(userCartState);
     useEffect(()=>{
         let sum=0;
         for(let index=0;index<userCartState?.length;index++){
-            sum=sum+Number(userCartState[index].quantity)*userCartState[index].price
+            sum=sum+Number(userCartState[index].quantity)*userCartState[index]?.price
         }
         setTotal(sum)
         
@@ -69,10 +69,10 @@ const Cart = () => {
                                         <img src={item?.productId?.images[0]?.url}  className='img-fluid'alt='product img'/>
                                     </div>
                                     <div className='w-75 mx-4'>
-                                        <p>{item?.productId.title}</p>
+                                        <p>{item?.productId?.title}</p>
                                         
                                         <p className='d-flex gap-3'>Color: <ul className='colors ps-0'>
-                                            <li style={{backgroundColor:item?.color.title}}></li></ul></p>
+                                            <li style={{backgroundColor:item?.color?.title}}></li></ul></p>
                                     </div>
                                 </div>
                                 <div className='cart-box'>
