@@ -61,11 +61,11 @@ const ViewOrder = () => {
 for (let i = 0; i < orderState?.orderItems?.length; i++) {
   data1.push({
     key: i,
-    name: orderState.orderItems[i]?.product.title ,
-    brand: orderState.orderItems[i]?.product.brand ,
+    name: orderState.orderItems[i]?.product?.title ,
+    brand: orderState.orderItems[i]?.product?.brand ,
     count:orderState.orderItems[i]?.quantity,
     color:orderState.orderItems[i]?.color?.title,
-    amount:orderState.orderItems[i]?.product.price,
+    amount:orderState.orderItems[i]?.product?.price,
    
     
   });}
