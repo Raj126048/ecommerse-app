@@ -97,7 +97,7 @@ const AddProduct = () => {
   useEffect(()=>{
     formik.values.color=color?color:" ";
     formik.values.images=img;
-  },[])
+  },[color])
 console.log(getedProduct)
     const formik=useFormik({
       enableReinitialize:true,
