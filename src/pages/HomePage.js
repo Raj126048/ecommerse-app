@@ -32,7 +32,6 @@ import Container from '../components/Container'
 import { services } from './Admin/Utils/Data'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../features/product/productSlice'
-
 import watch1 from '../images/watch-2.webp'
 import ReactStars from 'react-rating-stars-component'
 import {Link,  useNavigate } from 'react-router-dom'
