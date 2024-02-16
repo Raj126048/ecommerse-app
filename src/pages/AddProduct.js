@@ -182,7 +182,7 @@ console.log(color);
 <div className='error'>
                     {formik.touched.tags && formik.errors.tags}
                   </div>
-<Select mode="multiple" allowClear className='w-100' placeholder='select colors' defaultValue={color}  onChange={(i)=>handleColors(i)} value={formik.values.color}  options={coloropt} />
+<Select mode="multiple" allowClear className='w-100' placeholder='select colors' defaultValue={color}  onChange={(i)=>handleColors(i)} value={color}  options={coloropt} />
 <div className='error'>
                     {formik.touched.color && formik.errors.color}
                   </div>
